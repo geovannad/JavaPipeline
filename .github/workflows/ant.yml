@@ -36,3 +36,14 @@ jobs:
         dockerfile: Dockerfile
         username: ${{ secrets.DOCKER_USERNAME }}
         password: ${{ secrets.DOCKER_PASSWORD }}   
+
+    - name: Git Version
+        id: 1
+        uses: geovannadiniz/git-version@2.7.1
+      
+      - name: Use the version
+        run: |
+          echo ${{ steps.version.outputs.version }}
+      - name: Use the previous version
+        run: |
+          echo ${{ steps.version.outputs.previous-version }}
