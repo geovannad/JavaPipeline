@@ -1,4 +1,4 @@
 FROM openjdk:latest
 workdir salaF
-copy ..
+copy ./salaF
 cmd ["java", "src/main/org/example"]
