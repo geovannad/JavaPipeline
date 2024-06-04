@@ -30,7 +30,7 @@ jobs:
     - name: Build & push Docker image
       uses: mr-smithers-excellent/docker-build-push@v6
       with:
-        image: geovannad/java
+        image: geovannadiniz/java
         tags: 1
         registry: docker.io
         dockerfile: Dockerfile
